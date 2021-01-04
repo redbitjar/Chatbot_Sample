@@ -6,14 +6,17 @@ def create_app():
     # app.config.from_pyfile('../config.py')
     # app.config.from_object('config.Config')
     # app.config.from_object('config.DevConfig')
+    # app.config['JSON_AS_ASCII'] = False
     app.config.from_object('config.ProdConfig')
     print(app.config)
     print('-----------------')
 
-    from .kakaoBot.views import hello as kakaoHello
     from .kakaoBot.views import prodStatus as kakaoProdStatus
-    app.register_blueprint(kakaoHello.bp)
     app.register_blueprint(kakaoProdStatus.bp)
+
+
+    from .kakaoBotSample.views import helloKbot
+    app.register_blueprint(helloKbot.bp)
 
     # @app.route('/')
     # def hello_app():

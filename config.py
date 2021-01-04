@@ -11,7 +11,9 @@ class ProdConfig(Config):
     DEBUG = False
     FLASK_ENV = 'production'
     NAME = 'HH.K.PRD'
+    JSON_AS_ASCII = False
 
 class DevConfig(Config):    
     DEBUG = True
     FLASK_ENV = 'development'
+    JSON_AS_ASCII = False
