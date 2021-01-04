@@ -5,6 +5,7 @@ def create_app():
     app = Flask(__name__)
     # app.config.from_pyfile('../config.py')
     # app.config.from_object('config.Config')
+    # app.config.from_object('config.DevConfig')
     app.config.from_object('config.ProdConfig')
     print(app.config)
     print('-----------------')
