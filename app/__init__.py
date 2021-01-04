@@ -9,10 +9,10 @@ def create_app():
     print(app.config)
     print('-----------------')
 
-    from .kakaoBot.views import hello
-    from .kakaoBot.views import prodStatus
-    app.register_blueprint(hello.bp)
-    app.register_blueprint(prodStatus.bp)
+    from .kakaoBot.views import hello as kakaoHello
+    from .kakaoBot.views import prodStatus as kakaoProdStatus
+    app.register_blueprint(kakaoHello.bp)
+    app.register_blueprint(kakaoProdStatus.bp)
 
     # @app.route('/')
     # def hello_app():
