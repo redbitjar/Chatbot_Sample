@@ -245,7 +245,14 @@ def hello_carousel():
 @bp.route("/requiredParam", methods=['GET', 'POST'])
 def hello_requiredParam():
     # return 'test'
-    print(request.get_json())
+    body = request.get_json()
+    print('------------- body start-----------')
+    print(body)
+    print('------------- body end -----------')
+    utterance = body['userRequest']['utterance']
+    print('------------- utterance start-----------')
+    print(utterance)
+    print('------------- utterance end -----------')
 
     responseBody = {
         "version": "2.0",
