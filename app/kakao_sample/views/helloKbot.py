@@ -22,7 +22,7 @@ def hello_requestLog():
             'outputs': [
                 {
                     'simpleText': {
-                        'text': "hello I'm Ryan"
+                        'text': "굿"
                     }
                 }
             ]
