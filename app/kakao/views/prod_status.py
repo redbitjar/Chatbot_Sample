@@ -5,10 +5,10 @@ import json
 from flask import Blueprint, request, jsonify, render_template, current_app as app
 
 
-bp = Blueprint('kBotProdStatus', __name__, url_prefix='/kBotProdStatus')
+bp = Blueprint('kbot_prod_status', __name__, url_prefix='/')
 
 
-@bp.route("/", methods=['GET', 'POST'])
+@bp.route("kbotProdStatus", methods=['GET', 'POST'])
 def kBotProdStatus():
     # return 'test'
     print(request.get_json())
