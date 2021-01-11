@@ -5,11 +5,11 @@ import json
 from flask import Blueprint, request, jsonify, render_template, current_app as app
 
 
-bp = Blueprint('kbot_prod_status', __name__, url_prefix='/')
+bp = Blueprint('kbot_prod_status', __name__, url_prefix='/prod')
 
 
-@bp.route("kbotProdStatus", methods=['GET', 'POST'])
-def kBotProdStatus():
+@bp.route("kBotProdStatus", methods=['GET', 'POST'])
+def kbot_prod_status():
     # return 'test'
     print(request.get_json())
 
@@ -19,15 +19,82 @@ def kBotProdStatus():
             "outputs": [
                {
                     'simpleText': {
-                        'text': "hello I'm Ryan"
+                        'text': "생산현황 보여2줘"
                     }
                 }
             ],
             "quickReplies":[
                 {                    
-                    "label": "라미코미 이리온",
+                    "label": "목표대비 실적현황",
                     "action": "message",
-                    "messageText": "라미코미 이리온"                    
+                    "messageText": "목표실적"                    
+                },
+                {                    
+                    "label": "작업지시대비 실적현황",
+                    "action": "message",
+                    "messageText": "작업지시실적"                    
+                }
+            ]
+        }
+    }
+    return jsonify(responseBody)
+
+@bp.route("kBotPlanProdStatus", methods=['GET', 'POST'])
+def kbot_plan_prod_status():
+    # return 'test'
+    print(request.get_json())
+
+    responseBody = {
+        "version": "2.0",
+        "template": {
+            "outputs": [
+               {
+                    'simpleText': {
+                        'text': "생산현황 보여줘"
+                    }
+                }
+            ],
+            "quickReplies":[
+                {                    
+                    "label": "목표대비 실적현황",
+                    "action": "message",
+                    "messageText": "목표실적"                    
+                },
+                {                    
+                    "label": "작업지시대비 실적현황",
+                    "action": "message",
+                    "messageText": "작업지시실적"                    
+                }
+            ]
+        }
+    }
+    return jsonify(responseBody)
+
+@bp.route("kBotOrderProdStatus", methods=['GET', 'POST'])
+def kbot_order_prod_status():
+    # return 'test'
+    print(request.get_json())
+
+    responseBody = {
+        "version": "2.0",
+        "template": {
+            "outputs": [
+               {
+                    'simpleText': {
+                        'text': "생산현황 보여줘"
+                    }
+                }
+            ],
+            "quickReplies":[
+                {                    
+                    "label": "목표대비 실적현황",
+                    "action": "message",
+                    "messageText": "목표실적"                    
+                },
+                {                    
+                    "label": "작업지시대비 실적현황",
+                    "action": "message",
+                    "messageText": "작업지시실적"                    
                 }
             ]
         }
