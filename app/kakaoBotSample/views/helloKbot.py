@@ -13,6 +13,24 @@ def index():
     print(app.config['NAME'])
     return "Hello, World!"
 
+@bp.route('requestLog', methods=['GET', 'POST'])
+def hello_requestLog():
+    print(request.get_json())
+    responseBody = {
+        'version': "2.0",
+        'template': {
+            'outputs': [
+                {
+                    'simpleText': {
+                        'text': "hello I'm Ryan"
+                    }
+                }
+            ]
+        }
+    }
+    return jsonify(responseBody)
+
+
 @bp.route("/simpleText", methods=['GET', 'POST'])
 def hello_simpleText():
     # return 'test'
