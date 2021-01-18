@@ -1,0 +1,49 @@
+from .thumbnail import Thumbnail
+from .button import Button
+from .kakao_component import KakaoComponent
+
+class BasicCard(KakaoComponent):
+
+    '''
+    title 카드의 제목입니다. (최대 2줄)
+    description 카드에 대한 상세 설명입니다 (최대 230자)
+    buttons 카드의 버튼들을 포함합니다. (최대 3개)
+    '''
+    def __init__(self, thumbnail : Thumbnail):
+        self.__thumbnail = thumbnail.to_string()
+        self.__title = ''
+        self.__description = ''
+        self.__buttons = []
+
+    def set_title(self, title : str) -> 'BasicCard': 
+        self.__title = title
+        return self
+
+    def set_description(self, description : str):
+        self.__description = description
+        return self
+
+    def set_button(self, button : Button) -> 'BasicCard': 
+        self.__buttons.append(button)
+        return self
+
+    def set_buttons(self, buttons : list[Button]) -> 'BasicCard': 
+        self.__buttons = buttons
+        return self
+
+    def to_string(self) -> str:
+        type = "basicCard"
+        fields = {
+            type: {
+                "thumbnail": self.__thumbnail,
+            }
+        }
+        if self.__title:
+            fields[type]["title"] = self.__title
+        if self.__description:
+            fields[type]["description"] = self.__description
+        if not len(self.__buttons) == 0:
+            fields[type]["buttons"] = []
+            for btn in self.__buttons:
+                fields[type]["buttons"].append(btn.to_string())
+        return fields

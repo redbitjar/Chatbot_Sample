@@ -12,16 +12,23 @@ bp = Blueprint('kbot_prod_status', __name__, url_prefix='/prod')
 def kbot_prod_status():
     # return 'test'
     print(request.get_json())
-
+    
     responseBody = {
         "version": "2.0",
         "template": {
             "outputs": [
-               {
+                {
+                 "simpleImage": {
+                        "imageUrl": "http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg",
+                        "altText": "보물상자입니다"
+                    }
+                },
+                {
                     'simpleText': {
                         'text': "생산현황 보여2줘"
-                    }
+                    }               
                 }
+                 
             ],
             "quickReplies":[
                 {                    
@@ -37,6 +44,31 @@ def kbot_prod_status():
             ]
         }
     }
+
+    # responseBody = {
+    #     "version": "2.0",
+    #     "template": {
+    #         "outputs": [
+    #            {
+    #                 'simpleText': {
+    #                     'text': "생산현황 보여2줘"
+    #                 }
+    #             }
+    #         ],
+    #         "quickReplies":[
+    #             {                    
+    #                 "label": "목표대비 실적현황",
+    #                 "action": "message",
+    #                 "messageText": "목표실적"                    
+    #             },
+    #             {                    
+    #                 "label": "작업지시대비 실적현황",
+    #                 "action": "message",
+    #                 "messageText": "작업지시실적"                    
+    #             }
+    #         ]
+    #     }
+    # }
     return jsonify(responseBody)
 
 @bp.route("kBotPlanProdStatus", methods=['GET', 'POST'])
