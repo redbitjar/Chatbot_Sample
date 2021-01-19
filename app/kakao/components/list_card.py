@@ -1,8 +1,8 @@
-from .kakao_component import KakaoComponent
+from .component_base import OutputComponent
 from .button import Button
 from .list_item import ListItem
 
-class ListCard(KakaoComponent):
+class ListCard(OutputComponent):
 
     '''
     header 카드의 상단 항목

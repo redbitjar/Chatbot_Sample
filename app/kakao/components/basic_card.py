@@ -1,8 +1,8 @@
 from .thumbnail import Thumbnail
 from .button import Button
-from .kakao_component import KakaoComponent
+from .component_base import OutputComponent
 
-class BasicCard(KakaoComponent):
+class BasicCard(OutputComponent):
 
     '''
     title 카드의 제목입니다. (최대 2줄)

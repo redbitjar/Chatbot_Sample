@@ -1,4 +1,4 @@
-from .enum_type import Action, action_navigate
+from .action import Action, action_navigate
 from .extra import Extra
 
 class Button:

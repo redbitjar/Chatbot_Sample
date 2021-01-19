@@ -1,4 +1,4 @@
-from .enum_type import Action
+from .action import Action
 from .extra import Extra
 
 class QuickReplies:
