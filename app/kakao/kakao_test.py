@@ -1,5 +1,6 @@
 import json
-from  components import *
+from  kakao.components import *
+
 # from flask import jsonify
 
 # k = KaKaoTemplate()
