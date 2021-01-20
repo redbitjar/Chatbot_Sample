@@ -37,9 +37,7 @@ class BasicCard(OutputComponent):
     def to_string(self) -> str:
         type = "basicCard"
         fields = {
-            type: {
-                self.__to_string()
-            }
+            type: self.__to_string()
         }
         # if self.__title:
         #     fields[type]["title"] = self.__title
@@ -52,10 +50,11 @@ class BasicCard(OutputComponent):
         return fields
 
     def to_string_notype(self) -> str:
-        fields = {
-            self.__to_string()
-            # "thumbnail": self.__thumbnail,
-        }
+
+        fields = self.__to_string()
+        # fields = {
+        #     "thumbnail": self.__thumbnail,
+        # }
         # if self.__title:
         #     fields["title"] = self.__title
         # if self.__description:
@@ -64,7 +63,7 @@ class BasicCard(OutputComponent):
         #     fields["buttons"] = []
         # for btn in self.__buttons:
         #     fields["buttons"].append(btn.to_string())
-        # return fields
+        return fields
 
     def __to_string(self) -> str:
         fields = {
