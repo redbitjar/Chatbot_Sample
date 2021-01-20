@@ -33,7 +33,7 @@ class Carousel(OutputComponent):
             fields[type]["items"] = []
         
         for item in self.__items:
-            fields[type]["items"].append(item.to_string())
+            fields[type]["items"].append(item.to_string_notype())
 
         return fields
 

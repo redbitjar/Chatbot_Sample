@@ -51,3 +51,17 @@ class BasicCard(OutputComponent):
             fields[type]["buttons"].append(btn.to_string())
         return fields
 
+    def to_string_notype(self) -> str:
+        fields = {
+            "thumbnail": self.__thumbnail,
+        }
+        if self.__title:
+            fields["title"] = self.__title
+        if self.__description:
+            fields["description"] = self.__description
+        if not len(self.__buttons) == 0:
+            fields["buttons"] = []
+        for btn in self.__buttons:
+            fields["buttons"].append(btn.to_string())
+        return fields
+
