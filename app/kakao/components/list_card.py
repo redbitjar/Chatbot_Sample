@@ -34,6 +34,12 @@ class ListCard(OutputComponent):
                 "header": self.__header,
             }
         }
+
+        if len(self.__items) > 5:
+            raise Exception('items는 최대 5개 입니다')
+        if len(self.__buttons) > 2:
+            raise Exception('button은 최대 2개 입니다')
+
         if not len(self.__items) == 0:
             fields[type]["items"] = []
             for item in self.__items:
