@@ -74,6 +74,9 @@ def kbot_plan_prod_status():
 
     response = nexplant_mes_request(data)
 
+    simpleText = SimpleText("목표대비 생상현황 입니다")
+
+
     thumbnail1 = Thumbnail("http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg")
     basicCard1 = BasicCard(thumbnail1)
     basicCard1.set_title('12월 30일 생산 현황')
@@ -104,6 +107,7 @@ def kbot_plan_prod_status():
     
     
     skillTemplate = SkillTemplate()
+    skillTemplate.set_add_output(simpleText)
     skillTemplate.set_add_output(carousel)
     # skillTemplate.set_add_quick_reply(quickReply1)
     # skillTemplate.set_add_quick_reply(quickReply2)
