@@ -21,7 +21,8 @@ def kbot_prod_status():
     }
 
     data = {
-            "url":'https://odc.miracom.co.kr/v1/wip/orders',
+            # "url":'https://odc.miracom.co.kr/v1/wip/orders',
+            "url":app.config['NEXPLANT_MES_VERSION_URL']+'/wip/orders',
             "data":params,
             "method":'GET'
     } 

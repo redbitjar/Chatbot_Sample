@@ -1,6 +1,6 @@
 import time
 import requests
-from flask import request, jsonify, current_app
+from flask import request, jsonify, current_app as app
 
 nexPlantMesAuthKey = ""
 
@@ -21,7 +21,7 @@ def nexplant_mes_request(params={}):
         logStr += "re Authorization~!\n"       
     
     logStr += "API time : " + str(time.time()-start)
-    current_app.logger.info(logStr)
+    app.logger.info(logStr)
     return res.json()
 
 
@@ -46,11 +46,12 @@ def nexplant_mes_api_request(url="", data = {}, method="GET"):
 def nexplant_mes_api_auth():
     # 응답서버 -> MES 내부서버 인증 견본 POST    
     # 챗봇공장(00000) 인증키
-    url = "https://odc.miracom.co.kr/iam/oauth/token?grant_type=password&username=tsung.lim&password=manager"
+    url = app.config['NEXPLANT_MES_PATH_OAUTH']
+    # url = "https://odc.miracom.co.kr/iam/oauth/token?grant_type=password&username=tsung.lim&password=manager"
     # 관리자(admin) 인증키
     #url = "https://odc.miracom.co.kr/iam/oauth/token?grant_type=password&username=admin&password=manager"
-    
-    headers = {'Authorization': 'Basic b2F1dGgyX29pY2xpZW50OjBkMWFhNWE2LWM5NWUtNGVkMS05Y2E0LWNhOTQ4MjUwNzM3OQ=='}        
+    headers = {'Authorization': app.config['NEXPLANT_MES_AUTHORIZATION']}        
+    # headers = {'Authorization': 'Basic b2F1dGgyX29pY2xpZW50OjBkMWFhNWE2LWM5NWUtNGVkMS05Y2E0LWNhOTQ4MjUwNzM3OQ=='}        
     res = requests.post(url, headers = headers)
     res = res.json()    
     global nexPlantMesAuthKey 
