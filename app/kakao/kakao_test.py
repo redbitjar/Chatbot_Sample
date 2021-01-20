@@ -1,5 +1,11 @@
 import json
-from  kakao.components import *
+# from components import button
+from components import *
+
+btn = Button("label", Action.WEBLINK)
+btn.set_block_id("block id")
+print(btn.to_string())
+
 
 # from flask import jsonify
 
