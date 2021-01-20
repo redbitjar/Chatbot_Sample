@@ -1,7 +1,10 @@
+from typing import List
 from .component_base import OutputComponent
 from .button import Button
 from .list_item import ListItem
 
+Tbuttons = List[Button]
+Titems = List[ListItem]
 class ListCard(OutputComponent):
 
     '''
@@ -9,7 +12,7 @@ class ListCard(OutputComponent):
     items 	카드의 각각 아이템 (최대 5개)
     buttons  (최대 2개)
     '''
-    def __init__(self, header : ListItem, items : list[ListItem]):
+    def __init__(self, header : ListItem, items : Titems):
         self.__header = header.to_string()
         if len(items) == 0:
             raise Exception('items count is zero')
@@ -20,7 +23,7 @@ class ListCard(OutputComponent):
         self.__buttons.append(button)
         return self
 
-    def set_buttons(self, buttons : list[Button]) -> 'ListCard': 
+    def set_buttons(self, buttons : Tbuttons) -> 'ListCard': 
         self.__buttons = buttons
         return self
 

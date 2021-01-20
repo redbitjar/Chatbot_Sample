@@ -1,7 +1,9 @@
+from typing import List
 from .thumbnail import Thumbnail
 from .button import Button
 from .component_base import OutputComponent
 
+Tbuttons = List[Button]
 class BasicCard(OutputComponent):
 
     '''
@@ -27,7 +29,8 @@ class BasicCard(OutputComponent):
         self.__buttons.append(button)
         return self
 
-    def set_buttons(self, buttons : list[Button]) -> 'BasicCard': 
+    
+    def set_buttons(self, buttons : Tbuttons) -> 'BasicCard': 
         self.__buttons = buttons
         return self
 

@@ -1,6 +1,6 @@
 import json
 # from components import button
-from components import *
+from . import *
 
 btn = Button("label", Action.WEBLINK)
 btn.set_block_id("block id")
