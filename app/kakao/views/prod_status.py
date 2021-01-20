@@ -1,7 +1,6 @@
 # 목표대비 실적 현황 정보 (생산계획대비) , 생산 종합 현황 정보	(생산지시대비) 관련 blueprints 소스 코드
 import requests
 import json
-import time
 from flask import Blueprint, request, jsonify, render_template, current_app as app
 from app.utils.mes_api import nexplant_mes_request
 
