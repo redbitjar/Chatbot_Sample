@@ -27,9 +27,8 @@ def kbot_prod_status():
     } 
 
     response = nexplant_mes_request(data)
-    data = json.loads(response.text)
     print('------------------ mes data-------------')
-    print(data)
+    print(response)
     print('------------------ mes data end -------------')
 
     responseBody = {
