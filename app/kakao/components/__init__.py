@@ -6,7 +6,7 @@ from .link import Link
 from .list_item import ListItem
 from .carousel_header import CarouselHeader 
 from .extra import Extra
-from .quick_replies import QuickReplies
+from .quick_reply import QuickReply
 from .basic_card import BasicCard
 from .list_card import ListCard
 

@@ -3,6 +3,7 @@ import requests
 import json
 from flask import Blueprint, request, jsonify, render_template, current_app as app
 from app.utils.mes_api import nexplant_mes_request
+from app.kakao.components import SkillTemplate, SimpleText, QuickReply, Action
 
 bp = Blueprint('kbot_prod_status', __name__, url_prefix='/prod')
 
@@ -32,37 +33,55 @@ def kbot_prod_status():
     print(response)
     print('------------------ mes data end -------------')
 
-    responseBody = {
-        "version": "2.0",
-        "template": {
-            "outputs": [
-                {
-                 "simpleImage": {
-                        "imageUrl": "http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg",
-                        "altText": "보물상자입니다"
-                    }
-                },
-                {
-                    'simpleText': {
-                        'text': "생산현황 보여2줘"
-                    }               
-                }
+    simpleText = SimpleText('보고 싶은 생산현황을 선택하세요')
+    quickReply1 = QuickReply()
+    quickReply1.set_label('목표대비 실적현황').set_action(Action.MESSAGE).set_message_text('목표실적')
+    quickReply2 = QuickReply()
+    quickReply2.set_label('작업지시대비 실적현황').set_action(Action.MESSAGE).set_message_text('작업지시실적')
+
+    
+    skillTemplate = SkillTemplate()
+    skillTemplate.set_add_output(simpleText)
+    skillTemplate.set_add_quick_reply(quickReply1)
+    skillTemplate.set_add_quick_reply(quickReply2)
+    responseBody = skillTemplate.to_string()
+
+    print('-------------responseBody--------')
+    print(responseBody)
+    print('-------------responseBody end--------')
+
+
+    # responseBody = {
+    #     "version": "2.0",
+    #     "template": {
+    #         "outputs": [
+    #             {
+    #              "simpleImage": {
+    #                     "imageUrl": "http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg",
+    #                     "altText": "보물상자입니다"
+    #                 }
+    #             },
+    #             {
+    #                 'simpleText': {
+    #                     'text': "생산현황 보여2줘"
+    #                 }               
+    #             }
                  
-            ],
-            "quickReplies":[
-                {                    
-                    "label": "목표대비 실적현황",
-                    "action": "message",
-                    "messageText": "목표실적"                    
-                },
-                {                    
-                    "label": "작업지시대비 실적현황",
-                    "action": "message",
-                    "messageText": "작업지시실적"                    
-                }
-            ]
-        }
-    }
+    #         ],
+    #         "quickReplies":[
+    #             {                    
+    #                 "label": "목표대비 실적현황",
+    #                 "action": "message",
+    #                 "messageText": "목표실적"                    
+    #             },
+    #             {                    
+    #                 "label": "작업지시대비 실적현황",
+    #                 "action": "message",
+    #                 "messageText": "작업지시실적"                    
+    #             }
+    #         ]
+    #     }
+    # }
 
     # responseBody = {
     #     "version": "2.0",

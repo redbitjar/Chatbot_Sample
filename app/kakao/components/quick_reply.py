@@ -1,7 +1,7 @@
 from .action import Action
 from .extra import Extra
 
-class QuickReplies:
+class QuickReply:
     def __init__(self):        
         self.__label = ''
         self.__action = '' # message 혹은 block
@@ -34,11 +34,11 @@ class QuickReplies:
         if self.__label:
             fields["label"] = self.__label
         if self.__action:
-            fields["label"] = self.__action
+            fields["action"] = self.__action
         if self.__message_text:
-            fields["label"] = self.__message_text
+            fields["messageText"] = self.__message_text
         if self.__block_Id:
-            fields["label"] = self.__block_Id
+            fields["blockId"] = self.__block_Id
         if self.__extra:
             fields["extra"] = self.__extra
 

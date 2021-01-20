@@ -128,14 +128,14 @@ print(btn.to_string())
 # ---- simpe_text Test
 # skillTemplate = SkillTemplate()
 # simpleText = SimpleText("SimpleText Test")
-# skillTemplate.set_add_component(simpleText)
+# skillTemplate.set_add_output(simpleText)
 # print(skillTemplate.to_string())
 
 # ---- simpe_image Test
 # skillTemplate = SkillTemplate()
 # simpleImage = SimpleImage("http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg",
 # "보물상자입니다")
-# skillTemplate.set_add_component(simpleImage)
+# skillTemplate.set_add_output(simpleImage)
 # print(skillTemplate.to_string())
 
 # ---- basicCard Test
@@ -150,5 +150,5 @@ button2 = Button("구경하기", Action.WEBLINK)
 button2.set_web_link_url("https://e.kakao.com/t/hello-ryan")
 basicCard.set_button(button2)
 
-skillTemplate.set_add_component(basicCard)
+skillTemplate.set_add_output(basicCard)
 print(skillTemplate.to_string())

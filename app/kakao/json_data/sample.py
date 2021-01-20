@@ -32,3 +32,10 @@ default_skill_data = '''{
       "detailParams": {}
     }
   }'''
+
+def get_default_skill_data():
+  return default_skill_data
+
+class Data:
+  def to_string(self):
+    return default_skill_data
