@@ -1,18 +1,37 @@
 # 목표대비 실적 현황 정보 (생산계획대비) , 생산 종합 현황 정보	(생산지시대비) 관련 blueprints 소스 코드
-
 import requests
 import json
 from flask import Blueprint, request, jsonify, render_template, current_app as app
-
+from utils.mes_api import nexplant_mes_request
 
 bp = Blueprint('kbot_prod_status', __name__, url_prefix='/prod')
-
 
 @bp.route("kBotProdStatus", methods=['GET', 'POST'])
 def kbot_prod_status():
     # return 'test'
-    print(request.get_json())
-    
+    req = request.get_json()
+    print(req)
+
+    params = {
+        'pageSize': '20',
+        'pageNumber': '0',
+        'fromData':'20201201',
+        'toDate':'20201218',
+        'ordStatus': 'PROCESS,WAIT,CLOSE,COMPLETE'
+    }
+
+    data = {
+            "url":'https://odc.miracom.co.kr/v1/wip/orders',
+            "data":params,
+            "method":'GET'
+    } 
+
+    response = nexplant_mes_request(data)
+    data = json.loads(response.text)
+    print('------------------ mes data-------------')
+    print(data)
+    print('------------------ mes data end -------------')
+
     responseBody = {
         "version": "2.0",
         "template": {
