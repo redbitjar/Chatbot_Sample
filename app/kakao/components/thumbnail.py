@@ -35,7 +35,7 @@ class Thumbnail:
 
     def to_string(self) -> str:
        
-        fileds = {"imageurl" : self.__image_url}
+        fileds = {"imageUrl" : self.__image_url}
         if self.__link:
             fileds["link"] = self.__link
         if self.__fixed_ratio:
