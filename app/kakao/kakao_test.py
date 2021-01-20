@@ -1,5 +1,5 @@
 import json
-from components import button
+from components import *
 # from . import *
 
 # btn = Button("label", Action.WEBLINK)
@@ -75,20 +75,20 @@ from components import button
 
 
 # ---- basicCard Test
-thumbnail = Thumbnail("http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg")
-basicCard = BasicCard(thumbnail)
-basicCard.set_title("보물상자")
-basicCard.set_description('보물상자 안에는 뭐가 있을까')
-btn1 = Button("열어보기", Action.MESSAGE)
-btn1.set_mesaage_text("짜잔! 우리가 찾던 보물입니다")
-# basicCard.set_button(btn1)
+# thumbnail = Thumbnail("http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg")
+# basicCard = BasicCard(thumbnail)
+# basicCard.set_title("보물상자")
+# basicCard.set_description('보물상자 안에는 뭐가 있을까')
+# btn1 = Button("열어보기", Action.MESSAGE)
+# btn1.set_mesaage_text("짜잔! 우리가 찾던 보물입니다")
+# # basicCard.set_button(btn1)
 
-btn2 = Button("열어보기2", Action.MESSAGE)
-btn2.set_mesaage_text("짜잔! 우리가 찾던 보물입니다2")
-# basicCard.set_button(btn2)
-btns = [btn1, btn2]
-basicCard.set_buttons(btns)
-print(basicCard.to_string())
+# btn2 = Button("열어보기2", Action.MESSAGE)
+# btn2.set_mesaage_text("짜잔! 우리가 찾던 보물입니다2")
+# # basicCard.set_button(btn2)
+# btns = [btn1, btn2]
+# basicCard.set_buttons(btns)
+# print(basicCard.to_string())
 
 
 # ---- listCard Test
@@ -139,16 +139,54 @@ print(basicCard.to_string())
 # print(skillTemplate.to_string())
 
 # ---- basicCard Test
-skillTemplate = SkillTemplate()
-thumbnail = Thumbnail("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4BJ9LU4Ikr_EvZLmijfcjzQKMRCJ2bO3A8SVKNuQ78zu2KOqM")
-basicCard = BasicCard(thumbnail)
-basicCard.set_title("보물상자").set_description("보물상자 안에는 뭐가 있을까")
-button1 = Button("열어보기", Action.MESSAGE)
-button1.set_mesaage_text("짜잔! 우리가 찾던 보물입니다")
-basicCard.set_button(button1)
-button2 = Button("구경하기", Action.WEBLINK)
-button2.set_web_link_url("https://e.kakao.com/t/hello-ryan")
-basicCard.set_button(button2)
+# skillTemplate = SkillTemplate()
+# thumbnail = Thumbnail("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4BJ9LU4Ikr_EvZLmijfcjzQKMRCJ2bO3A8SVKNuQ78zu2KOqM")
+# basicCard = BasicCard(thumbnail)
+# basicCard.set_title("보물상자").set_description("보물상자 안에는 뭐가 있을까")
+# button1 = Button("열어보기", Action.MESSAGE)
+# button1.set_mesaage_text("짜잔! 우리가 찾던 보물입니다")
+# basicCard.set_button(button1)
+# button2 = Button("구경하기", Action.WEBLINK)
+# button2.set_web_link_url("https://e.kakao.com/t/hello-ryan")
+# basicCard.set_button(button2)
 
-skillTemplate.set_add_output(basicCard)
-print(skillTemplate.to_string())
+# skillTemplate.set_add_output(basicCard)
+# print(skillTemplate.to_string())
+
+# ---- Carousel Test
+
+thumbnail1 = Thumbnail("http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg")
+basicCard1 = BasicCard(thumbnail1)
+basicCard1.set_title('12월 30일 생산 현황')
+basicCard1.set_description('계획: 10, 실적: 5, 달성률: 0.5')
+
+thumbnail2 = Thumbnail("http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg")
+basicCard2 = BasicCard(thumbnail2)
+basicCard2.set_title('12월 5주 생산 현황')
+basicCard2.set_description('계획: 10, 실적: 5, 달성률: 0.5')
+
+thumbnail3 = Thumbnail("http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg")
+basicCard3 = BasicCard(thumbnail3)
+basicCard3.set_title('12월 생산 현황')
+basicCard3.set_description('계획: 10, 실적: 5, 달성률: 0.5')
+
+thumbnail4 = Thumbnail("http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg")
+basicCard4 = BasicCard(thumbnail4)
+basicCard4.set_title('4분기 생산 현황')
+basicCard4.set_description('계획: 10, 실적: 5, 달성률: 0.5')
+
+thumbnail5 = Thumbnail("http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg")
+basicCard5 = BasicCard(thumbnail5)
+basicCard5.set_title('2020년 생산 현황')
+basicCard5.set_description('계획: 10, 실적: 5, 달성률: 0.5')
+
+basicCards = [basicCard1, basicCard2, basicCard3, basicCard4, basicCard5]
+# basicCards.append(basicCards)
+# # carousel = Carousel(basicCards)
+carousel = Carousel(basicCards)
+# carousel.set_items(basicCards)
+carousel.to_string()
+# # print(carousel.to_string())
+
+l = []
+print(len(basicCards))

@@ -47,6 +47,7 @@ class BasicCard(OutputComponent):
             fields[type]["description"] = self.__description
         if not len(self.__buttons) == 0:
             fields[type]["buttons"] = []
-            for btn in self.__buttons:
-                fields[type]["buttons"].append(btn.to_string())
+        for btn in self.__buttons:
+            fields[type]["buttons"].append(btn.to_string())
         return fields
+
