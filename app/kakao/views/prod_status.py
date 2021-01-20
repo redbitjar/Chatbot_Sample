@@ -2,7 +2,7 @@
 import requests
 import json
 from flask import Blueprint, request, jsonify, render_template, current_app as app
-from utils.mes_api import nexplant_mes_request
+from app.utils.mes_api import nexplant_mes_request
 
 bp = Blueprint('kbot_prod_status', __name__, url_prefix='/prod')
 
