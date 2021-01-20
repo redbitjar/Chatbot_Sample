@@ -76,7 +76,6 @@ def kbot_plan_prod_status():
 
     simpleText = SimpleText("목표대비 생상현황 입니다")
 
-
     thumbnail1 = Thumbnail("http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg")
     basicCard1 = BasicCard(thumbnail1)
     basicCard1.set_title('12월 30일 생산 현황')
@@ -109,33 +108,8 @@ def kbot_plan_prod_status():
     skillTemplate = SkillTemplate()
     skillTemplate.set_add_output(simpleText)
     skillTemplate.set_add_output(carousel)
-    # skillTemplate.set_add_quick_reply(quickReply1)
-    # skillTemplate.set_add_quick_reply(quickReply2)
     responseBody = skillTemplate.to_string()
-    # responseBody = {
-    #     "version": "2.0",
-    #     "template": {
-    #         "outputs": [
-    #            {
-    #                 'simpleText': {
-    #                     'text': "생산현황 보여줘"
-    #                 }
-    #             }
-    #         ],
-    #         "quickReplies":[
-    #             {                    
-    #                 "label": "목표대비 실적현황",
-    #                 "action": "message",
-    #                 "messageText": "목표실적"                    
-    #             },
-    #             {                    
-    #                 "label": "작업지시대비 실적현황",
-    #                 "action": "message",
-    #                 "messageText": "작업지시실적"                    
-    #             }
-    #         ]
-    #     }
-    # }
+  
     return jsonify(responseBody)
 
 @bp.route("kBotOrderProdStatus", methods=['GET', 'POST'])
