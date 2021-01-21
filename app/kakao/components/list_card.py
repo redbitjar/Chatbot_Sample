@@ -1,5 +1,5 @@
 from typing import List
-from .component_base import OutputComponent
+from .output_component import OutputComponent
 from .button import Button
 from .list_item import ListItem
 

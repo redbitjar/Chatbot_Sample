@@ -1,4 +1,4 @@
-from .component_base import OutputComponent
+from .output_component import OutputComponent
 
 class SimpleImage(OutputComponent):
     '''

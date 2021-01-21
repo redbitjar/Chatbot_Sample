@@ -1,7 +1,7 @@
 from typing import List
 from .thumbnail import Thumbnail
 from .button import Button
-from .component_base import OutputComponent
+from .output_component import OutputComponent
 
 Tbuttons = List[Button]
 class BasicCard(OutputComponent):

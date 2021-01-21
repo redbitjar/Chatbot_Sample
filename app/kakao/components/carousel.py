@@ -1,5 +1,5 @@
 from typing import List
-from .component_base import OutputComponent
+from .output_component import OutputComponent
 from .basic_card import BasicCard
 from .carousel_header import CarouselHeader
 
