@@ -4,7 +4,7 @@ import requests
 import json
 from flask import Blueprint, request, jsonify, render_template, current_app as app
 from app.utils.mes_api import nexplant_mes_request
-from app.kakao.outputs.mes_parser import mes_data_parser
+from app.utils.mes_parser import mes_data_parser
 from app.kakao.outputs.prod_status_output import make_def_plan_prod_sts, make_def_order_prod_sts
 from app.kakao.components import SkillTemplate, SimpleText, QuickReply, Action, BasicCard, Carousel, Thumbnail
 from app.kakao.json_data import sample as s
