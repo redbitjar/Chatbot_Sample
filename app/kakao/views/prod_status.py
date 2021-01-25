@@ -4,7 +4,10 @@ import requests
 import json
 from flask import Blueprint, request, jsonify, render_template, current_app as app
 from app.utils.mes_api import nexplant_mes_request
+from app.kakao.outputs.mes_parser import mes_data_parser
+from app.kakao.outputs.prod_status_output import make_def_plan_prod_sts, make_def_order_prod_sts
 from app.kakao.components import SkillTemplate, SimpleText, QuickReply, Action, BasicCard, Carousel, Thumbnail
+from app.kakao.json_data import sample as s
 
 bp = Blueprint('kbot_prod_status', __name__, url_prefix='/prod')
 
@@ -14,22 +17,22 @@ def kbot_prod_status():
     req = request.get_json()
     # print(req)
 
-    params = {
-        'pageSize': '20',
-        'pageNumber': '0',
-        'fromData':'20201201',
-        'toDate':'20201218',
-        'ordStatus': 'PROCESS,WAIT,CLOSE,COMPLETE'
-    }
+    # params = {
+    #     'pageSize': '20',
+    #     'pageNumber': '0',
+    #     'fromData':'20201201',
+    #     'toDate':'20201218',
+    #     'ordStatus': 'PROCESS,WAIT,CLOSE,COMPLETE'
+    # }
 
-    data = {
-            # "url":'https://odc.miracom.co.kr/v1/wip/orders',
-            "url":app.config['NEXPLANT_MES_VERSION_URL']+'/wip/orders',
-            "data":params,
-            "method":'GET'
-    } 
+    # data = {
+    #         # "url":'https://odc.miracom.co.kr/v1/wip/orders',
+    #         "url":app.config['NEXPLANT_MES_VERSION_URL']+'/wip/orders',
+    #         "data":params,
+    #         "method":'GET'
+    # } 
 
-    response = nexplant_mes_request(data)
+    # response = nexplant_mes_request(data)
     # print('------------------ mes data-------------')
     # print(response)
     # print('------------------ mes data end -------------')
@@ -73,75 +76,86 @@ def kbot_plan_prod_status():
     } 
 
     response = nexplant_mes_request(data)
+    # 정상 MES 연결 후 삭제
+    # response = s.res_simple_text_mes
+    # response = s.res_kakao_text_mes
+    response = s.res_def_mes_plan_sts
+    responseBody = mes_data_parser(response, make_def_plan_prod_sts)
 
-    simpleText = SimpleText("목표대비 생상현황 입니다")
-
-    thumbnail1 = Thumbnail("http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg")
-    basicCard1 = BasicCard(thumbnail1)
-    basicCard1.set_title('12월 30일 생산 현황')
-    basicCard1.set_description('계획: 10, 실적: 5, 달성률: 0.5')
-
-    thumbnail2 = Thumbnail("http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg")
-    basicCard2 = BasicCard(thumbnail2)
-    basicCard2.set_title('12월 5주 생산 현황')
-    basicCard2.set_description('계획: 10, 실적: 5, 달성률: 0.5')
-
-    thumbnail3 = Thumbnail("http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg")
-    basicCard3 = BasicCard(thumbnail3)
-    basicCard3.set_title('12월 생산 현황')
-    basicCard3.set_description('계획: 10, 실적: 5, 달성률: 0.5')
-
-    thumbnail4 = Thumbnail("http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg")
-    basicCard4 = BasicCard(thumbnail4)
-    basicCard4.set_title('4분기 생산 현황')
-    basicCard4.set_description('계획: 10, 실적: 5, 달성률: 0.5')
-
-    thumbnail5 = Thumbnail("http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg")
-    basicCard5 = BasicCard(thumbnail5)
-    basicCard5.set_title('2020년 생산 현황')
-    basicCard5.set_description('계획: 10, 실적: 5, 달성률: 0.5')
-    
-    basicCards = [basicCard1, basicCard2, basicCard3, basicCard4, basicCard5]
-    carousel = Carousel(basicCards)
-    
-    
-    skillTemplate = SkillTemplate()
-    skillTemplate.set_add_output(simpleText)
-    skillTemplate.set_add_output(carousel)
-    responseBody = skillTemplate.to_string()
-  
     return jsonify(responseBody)
+
+    # simpleText = SimpleText("목표대비 생상현황 입니다")
+
+    # thumbnail1 = Thumbnail("http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg")
+    # basicCard1 = BasicCard(thumbnail1)
+    # basicCard1.set_title('12월 30일 생산 현황')
+    # basicCard1.set_description('계획: 10, 실적: 5, 달성률: 0.5')
+
+    # thumbnail2 = Thumbnail("http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg")
+    # basicCard2 = BasicCard(thumbnail2)
+    # basicCard2.set_title('12월 5주 생산 현황')
+    # basicCard2.set_description('계획: 10, 실적: 5, 달성률: 0.5')
+
+    # thumbnail3 = Thumbnail("http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg")
+    # basicCard3 = BasicCard(thumbnail3)
+    # basicCard3.set_title('12월 생산 현황')
+    # basicCard3.set_description('계획: 10, 실적: 5, 달성률: 0.5')
+
+    # thumbnail4 = Thumbnail("http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg")
+    # basicCard4 = BasicCard(thumbnail4)
+    # basicCard4.set_title('4분기 생산 현황')
+    # basicCard4.set_description('계획: 10, 실적: 5, 달성률: 0.5')
+
+    # thumbnail5 = Thumbnail("http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg")
+    # basicCard5 = BasicCard(thumbnail5)
+    # basicCard5.set_title('2020년 생산 현황')
+    # basicCard5.set_description('계획: 10, 실적: 5, 달성률: 0.5')
+    
+    # basicCards = [basicCard1, basicCard2, basicCard3, basicCard4, basicCard5]
+    # carousel = Carousel(basicCards)
+    
+    
+    # skillTemplate = SkillTemplate()
+    # skillTemplate.set_add_output(simpleText)
+    # skillTemplate.set_add_output(carousel)
+    # responseBody = skillTemplate.to_string()
+  
+    # return jsonify(responseBody)
 
 @bp.route("kBotOrderProdStatus", methods=['GET', 'POST'])
 def kbot_order_prod_status():
-    # return 'test'
-    print(request.get_json())
+    '''
+    작업지시대비 실적 현황
+    '''
 
-    responseBody = {
-        "version": "2.0",
-        "template": {
-            "outputs": [
-               {
-                    'simpleText': {
-                        'text': "생산현황 보여줘"
-                    }
-                }
-            ],
-            "quickReplies":[
-                {                    
-                    "label": "목표대비 실적현황",
-                    "action": "message",
-                    "messageText": "목표실적"                    
-                },
-                {                    
-                    "label": "작업지시대비 실적현황",
-                    "action": "message",
-                    "messageText": "작업지시실적"                    
-                }
-            ]
-        }
+    # return 'test'
+    req = request.get_json()
+    # print(req)
+
+    params = {
+        'pageSize': '20',
+        'pageNumber': '0',
+        'fromData':'20201201',
+        'toDate':'20201218',
+        'ordStatus': 'PROCESS,WAIT,CLOSE,COMPLETE'
     }
+
+    data = {
+            # "url":'https://odc.miracom.co.kr/v1/wip/orders',
+            "url":app.config['NEXPLANT_MES_VERSION_URL']+'/wip/orders',
+            "data":params,
+            "method":'GET'
+    } 
+
+    response = nexplant_mes_request(data)
+    # 정상 MES 연결 후 삭제
+    # response = s.res_simple_text_mes
+    response = s.res_def_mes_pln_sum
+    # response = s.res_def_mes_plan_sts
+    responseBody = mes_data_parser(response, make_def_order_prod_sts)
+
     return jsonify(responseBody)
+
 
 # @bp.route('/')
 # @bp.route('/index')
