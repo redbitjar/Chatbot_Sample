@@ -49,10 +49,10 @@ print('---------log start------------')
 #         #     "formatter": "default",
 #         #     "level": "ERROR",
 #         #     "mailhost": ("smtp.samsung.net", 25),
-#         #     "fromaddr": "hh.k@miracom.co.kr",
-#         #     "toaddrs": ["hh.k@miracom.co.kr"],
+#         #     "fromaddr": "test.k@test.com",
+#         #     "toaddrs": ["test.k@test.com"],
 #         #     "subject": "Error Logs",
-#         #     "credentials": ("hh.k", "zaq1xsw2!"),
+#         #     "credentials": ("your id", "your pwd"),
 #         # }
 #     },
 #     'root': {
