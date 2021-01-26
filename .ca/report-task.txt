@@ -1,0 +1,6 @@
+projectKey=local:com.samsungsds.analyst.code.main.App
+serverUrl=http://127.0.0.1:63817
+serverVersion=7.9.4.35981
+dashboardUrl=http://127.0.0.1:63817/dashboard?id=local%3Acom.samsungsds.analyst.code.main.App
+ceTaskId=
+ceTaskUrl=http://127.0.0.1:63817/api/ce/task?id=

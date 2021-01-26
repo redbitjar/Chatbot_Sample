@@ -1,7 +1,12 @@
 from flask import Flask
+import logging
+import log
 
 
 def create_app():
+
+    # logging.basicConfig(filename = "logs/project.log", level = logging.DEBUG)
+
     app = Flask(__name__)
     # app.config.from_pyfile('../config.py')
     # app.config.from_object('config.Config')
@@ -14,6 +19,10 @@ def create_app():
     from .kakao.views import prod_status as kakao_prod_status
     app.register_blueprint(kakao_prod_status.bp)
 
+    #-------------- test --------------
+    from example import router
+    app.register_blueprint(router.bp)
+ 
 
     # from .kakao_sample.views import helloKbot
     # app.register_blueprint(helloKbot.bp)

@@ -1,0 +1,230 @@
+[2021-01-26 17:03:28,861] INFO in _internal:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+[2021-01-26 17:03:36,367] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:03:36] "[33mGET /fasd HTTP/1.1[0m" 404 -
+[2021-01-26 17:03:54,395] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:03:54] "[33mGET /prod/kBotProdStatus2 HTTP/1.1[0m" 404 -
+[2021-01-26 17:04:01,504] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:04:01] "[37mGET /prod/kBotProdStatus HTTP/1.1[0m" 200 -
+[2021-01-26 17:13:06,979] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:13:06] "[37mGET /prod/kBotProdStatus HTTP/1.1[0m" 200 -
+[2021-01-26 17:13:18,947] INFO in router: index test
+[2021-01-26 17:13:18,949] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:13:18] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-01-26 17:14:01,492] INFO in router: index test
+[2021-01-26 17:14:01,493] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:14:01] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-01-26 17:15:12,955] INFO in _internal:  * Restarting with stat
+[2021-01-26 17:15:20,116] WARNING in _internal:  * Debugger is active!
+[2021-01-26 17:15:20,239] INFO in _internal:  * Debugger PIN: 266-449-688
+[2021-01-26 17:15:20,380] INFO in _internal:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+[2021-01-26 17:15:23,753] INFO in router: index test
+[2021-01-26 17:15:24,719] INFO in log: 20210126_17:15:24/<Request 'http://localhost:5000/' [GET]>/index test
+[2021-01-26 17:15:24,720] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:15:24] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-01-26 17:16:47,282] INFO in router: index test
+[2021-01-26 17:16:47,289] INFO in log: 20210126_17:16:47/<Request 'http://localhost:5000/' [GET]>/index test
+[2021-01-26 17:16:47,322] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:16:47] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-01-26 17:20:47,777] INFO in _internal:  * Detected change in 'D:\\idePython\\gitclone\\Chatbot_Sample\\example\\router.py', reloading
+[2021-01-26 17:20:49,614] INFO in _internal:  * Restarting with stat
+[2021-01-26 17:20:53,281] WARNING in _internal:  * Debugger is active!
+[2021-01-26 17:20:53,318] INFO in _internal:  * Debugger PIN: 266-449-688
+[2021-01-26 17:20:53,401] INFO in _internal:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+[2021-01-26 17:20:59,206] INFO in router: index test
+[2021-01-26 17:20:59,233] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:20:59] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[2021-01-26 17:20:59,306] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:20:59] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+[2021-01-26 17:20:59,487] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:20:59] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+[2021-01-26 17:20:59,613] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:20:59] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+[2021-01-26 17:21:00,145] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:21:00] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+[2021-01-26 17:21:00,161] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:21:00] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+[2021-01-26 17:21:00,397] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:21:00] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+[2021-01-26 17:21:10,852] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:21:10] "[37mGET /prod/kBotProdStatus HTTP/1.1[0m" 200 -
+[2021-01-26 17:21:15,254] INFO in router: index test
+[2021-01-26 17:21:15,278] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:21:15] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[2021-01-26 17:21:15,557] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:21:15] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+[2021-01-26 17:21:15,655] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:21:15] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+[2021-01-26 17:21:15,656] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:21:15] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+[2021-01-26 17:21:16,077] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:21:16] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+[2021-01-26 17:21:16,084] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:21:16] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+[2021-01-26 17:21:44,390] INFO in _internal:  * Detected change in 'D:\\idePython\\gitclone\\Chatbot_Sample\\example\\router.py', reloading
+[2021-01-26 17:21:45,569] INFO in _internal:  * Restarting with stat
+[2021-01-26 17:21:47,666] WARNING in _internal:  * Debugger is active!
+[2021-01-26 17:21:47,684] INFO in _internal:  * Debugger PIN: 266-449-688
+[2021-01-26 17:21:47,731] INFO in _internal:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+[2021-01-26 17:21:47,819] INFO in router: index test
+[2021-01-26 17:21:47,838] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:21:47] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[2021-01-26 17:21:47,976] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:21:47] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+[2021-01-26 17:21:48,074] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:21:48] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+[2021-01-26 17:21:48,280] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:21:48] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+[2021-01-26 17:21:48,725] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:21:48] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+[2021-01-26 17:21:48,745] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:21:48] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+[2021-01-26 17:21:48,978] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:21:48] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+[2021-01-26 17:21:53,529] INFO in router: index test
+[2021-01-26 17:21:53,556] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:21:53] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[2021-01-26 17:21:53,827] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:21:53] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+[2021-01-26 17:21:53,913] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:21:53] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+[2021-01-26 17:21:53,914] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:21:53] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+[2021-01-26 17:21:54,353] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:21:54] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+[2021-01-26 17:21:54,358] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:21:54] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+[2021-01-26 17:21:54,604] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:21:54] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+[2021-01-26 17:56:40,345] INFO in router: index test
+[2021-01-26 17:56:40,362] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:56:40] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[2021-01-26 17:56:40,547] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:56:40] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+[2021-01-26 17:56:40,598] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:56:40] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+[2021-01-26 17:56:40,846] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:56:40] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+[2021-01-26 17:56:41,265] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:56:41] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+[2021-01-26 17:56:41,296] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:56:41] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+[2021-01-26 17:57:33,480] INFO in _internal:  * Detected change in 'D:\\idePython\\gitclone\\Chatbot_Sample\\example\\router.py', reloading
+[2021-01-26 17:57:34,566] INFO in _internal:  * Restarting with stat
+[2021-01-26 17:57:36,735] WARNING in _internal:  * Debugger is active!
+[2021-01-26 17:57:36,754] INFO in _internal:  * Debugger PIN: 266-449-688
+[2021-01-26 17:57:36,802] INFO in _internal:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+[2021-01-26 17:57:41,348] INFO in _internal:  * Detected change in 'D:\\idePython\\gitclone\\Chatbot_Sample\\example\\router.py', reloading
+[2021-01-26 17:57:42,428] INFO in _internal:  * Restarting with stat
+[2021-01-26 17:57:45,226] WARNING in _internal:  * Debugger is active!
+[2021-01-26 17:57:45,245] INFO in _internal:  * Debugger PIN: 266-449-688
+[2021-01-26 17:57:45,308] INFO in _internal:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+[2021-01-26 17:57:45,382] INFO in router: index test
+[2021-01-26 17:57:45,744] INFO in log: 20210126_17:57:45/<Request 'http://localhost:5000/' [GET]>/index test
+[2021-01-26 17:57:45,766] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:57:45] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[2021-01-26 17:57:45,844] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:57:45] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+[2021-01-26 17:57:45,846] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:57:45] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+[2021-01-26 17:57:46,145] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:57:46] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+[2021-01-26 17:57:46,527] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:57:46] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+[2021-01-26 17:57:46,533] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:57:46] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+[2021-01-26 17:57:46,778] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:57:46] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+[2021-01-26 17:58:05,443] INFO in _internal:  * Detected change in 'D:\\idePython\\gitclone\\Chatbot_Sample\\app\\__init__.py', reloading
+[2021-01-26 17:58:20,696] INFO in _internal:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+[2021-01-26 17:58:25,425] INFO in router: index test
+[2021-01-26 17:58:25,771] INFO in log: 20210126_17:58:25/<Request 'http://localhost:5000/' [GET]>/index test
+[2021-01-26 17:58:25,772] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\idePython\gitclone\Chatbot_Sample\example\router.py", line 17, in index_sample
+    f = open("≥™æ¯¥¬∆ƒ¿œ", 'r')
+FileNotFoundError: [Errno 2] No such file or directory: '≥™æ¯¥¬∆ƒ¿œ'
+[2021-01-26 17:58:26,361] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:58:26] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[2021-01-26 17:59:01,519] INFO in router: index test
+[2021-01-26 17:59:01,521] INFO in log: 20210126_17:59:01/<Request 'http://localhost:5000/' [GET]>/index test
+[2021-01-26 17:59:01,522] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\idePython\gitclone\Chatbot_Sample\example\router.py", line 17, in index_sample
+    f = open("≥™æ¯¥¬∆ƒ¿œ", 'r')
+FileNotFoundError: [Errno 2] No such file or directory: '≥™æ¯¥¬∆ƒ¿œ'
+[2021-01-26 17:59:01,739] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 17:59:01] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[2021-01-26 18:01:10,146] INFO in _internal:  * Restarting with stat
+[2021-01-26 18:01:12,285] WARNING in _internal:  * Debugger is active!
+[2021-01-26 18:01:12,301] INFO in _internal:  * Debugger PIN: 266-449-688
+[2021-01-26 18:01:12,346] INFO in _internal:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+[2021-01-26 18:01:15,774] INFO in router: index test
+[2021-01-26 18:01:16,124] INFO in router: index test
+[2021-01-26 18:01:16,164] INFO in log: 20210126_18:01:16/<Request 'http://localhost:5000/' [GET]>/index test
+[2021-01-26 18:01:16,164] INFO in log: 20210126_18:01:16/<Request 'http://localhost:5000/' [GET]>/index test
+[2021-01-26 18:01:16,197] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:01:16] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[2021-01-26 18:01:16,200] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:01:16] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[2021-01-26 18:01:16,308] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:01:16] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+[2021-01-26 18:01:16,611] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:01:16] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+[2021-01-26 18:01:16,612] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:01:16] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+[2021-01-26 18:01:17,116] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:01:17] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+[2021-01-26 18:01:17,157] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:01:17] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+[2021-01-26 18:01:17,368] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:01:17] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+[2021-01-26 18:01:28,452] INFO in router: index test
+[2021-01-26 18:01:28,453] INFO in log: 20210126_18:01:28/<Request 'http://localhost:5000/' [GET]>/index test
+[2021-01-26 18:01:28,476] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:01:28] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[2021-01-26 18:01:28,749] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:01:28] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+[2021-01-26 18:01:28,865] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:01:28] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+[2021-01-26 18:01:28,865] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:01:28] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+[2021-01-26 18:01:29,243] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:01:29] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+[2021-01-26 18:01:29,252] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:01:29] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+[2021-01-26 18:01:29,489] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:01:29] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+[2021-01-26 18:01:46,174] INFO in router: index test
+[2021-01-26 18:01:46,176] INFO in log: 20210126_18:01:46/<Request 'http://localhost:5000/' [GET]>/index test
+[2021-01-26 18:01:46,217] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:01:46] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[2021-01-26 18:01:46,474] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:01:46] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+[2021-01-26 18:01:46,612] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:01:46] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+[2021-01-26 18:01:46,613] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:01:46] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+[2021-01-26 18:01:46,986] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:01:46] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+[2021-01-26 18:01:47,004] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:01:47] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+[2021-01-26 18:01:47,239] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:01:47] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+[2021-01-26 18:02:44,738] INFO in router: index test
+[2021-01-26 18:02:44,740] INFO in log: 20210126_18:02:44/<Request 'http://localhost:5000/' [GET]>/index test
+[2021-01-26 18:02:44,775] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:02:44] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[2021-01-26 18:02:45,060] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:02:45] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+[2021-01-26 18:02:45,334] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:02:45] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+[2021-01-26 18:02:45,335] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:02:45] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+[2021-01-26 18:02:45,778] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:02:45] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+[2021-01-26 18:02:45,802] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:02:45] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+[2021-01-26 18:02:46,029] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:02:46] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+[2021-01-26 18:03:11,120] INFO in _internal:  * Detected change in 'D:\\idePython\\gitclone\\Chatbot_Sample\\log.py', reloading
+[2021-01-26 18:03:13,299] INFO in _internal:  * Restarting with stat
+[2021-01-26 18:03:51,900] INFO in _internal:  * Restarting with stat
+[2021-01-26 18:03:53,741] WARNING in _internal:  * Debugger is active!
+[2021-01-26 18:03:53,761] INFO in _internal:  * Debugger PIN: 266-449-688
+[2021-01-26 18:03:53,817] INFO in _internal:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+[2021-01-26 18:03:58,170] INFO in router: index test
+[2021-01-26 18:03:58,602] INFO in log: 20210126_18:03:58/<Request 'http://localhost:5000/' [GET]>/index test
+[2021-01-26 18:03:58,636] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:03:58] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[2021-01-26 18:04:04,978] INFO in router: index test
+[2021-01-26 18:04:04,980] INFO in log: 20210126_18:04:04/<Request 'http://localhost:5000/' [GET]>/index test
+[2021-01-26 18:04:05,006] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:04:05] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[2021-01-26 18:04:05,096] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:04:05] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+[2021-01-26 18:04:05,398] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:04:05] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+[2021-01-26 18:04:05,398] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:04:05] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+[2021-01-26 18:04:05,867] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:04:05] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+[2021-01-26 18:04:05,892] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:04:05] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+[2021-01-26 18:04:06,119] INFO in _internal: 127.0.0.1 - - [26/Jan/2021 18:04:06] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+[2021-01-26 18:04:25,688] INFO in _internal:  * Detected change in 'D:\\idePython\\gitclone\\Chatbot_Sample\\log.py', reloading
+[2021-01-26 18:04:26,971] INFO in _internal:  * Restarting with stat
+[2021-01-26 18:04:44,769] INFO in _internal:  * Restarting with stat
+[2021-01-26 18:04:48,296] WARNING in _internal:  * Debugger is active!
+[2021-01-26 18:04:48,328] INFO in _internal:  * Debugger PIN: 266-449-688
+[2021-01-26 18:04:48,412] INFO in _internal:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+[2021-01-26 18:05:33,065] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\idePython\gitclone\Chatbot_Sample\example\router.py", line 17, in index_sample
+    f = open("≥™æ¯¥¬∆ƒ¿œ", 'r')
+FileNotFoundError: [Errno 2] No such file or directory: '≥™æ¯¥¬∆ƒ¿œ'
+[2021-01-26 18:09:24,688] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\idePython\gitclone\Chatbot_Sample\example\router.py", line 17, in index_sample
+    f = open("ÎÇòÏóÜÎäîÌååÏùº", 'r')
+FileNotFoundError: [Errno 2] No such file or directory: 'ÎÇòÏóÜÎäîÌååÏùº'
